@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["Mikkel Mørk Hegnhøj <mikkel@fermyon.com>"]
+description = ""
+name = "dotnet_bot"
+version = "1.0.0"
+trigger = { type = "http", base = "/" }
+
+[[component]]
+id = "dotnet_bot"
+source = "bin/Release/net7.0/dotnet_bot.wasm"
+[component.build]
+command = "dotnet build -c Release"
+[component.trigger]
+route = "/..."
