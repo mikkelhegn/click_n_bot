@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <button>Click Me!!!</button>
+    <span id="clicks"></span>
+</body>
+
+<script>
+    const btn = document.querySelector("button");
+    btn.addEventListener("click", function () {
+        const options = {
+            method: 'POST'
+        }
+
+        fetch('../api', options).then(response => response.text()).then(body => {
+            document.getElementById("clicks").innerHTML = body;
+        });
+    }
+    );
+</script>
+
+</html>
